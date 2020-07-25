@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import Nav from "./nav"
 
 const Head = styled.header`
-  background-color: #333;
+  background-color: #222;
   padding: 1rem;
 `
 const HeaderContainer = styled.div`
