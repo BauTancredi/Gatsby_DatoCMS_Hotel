@@ -11,7 +11,7 @@ const LinkHome = styled(Link)`
 `
 
 const Head = styled.header`
-  background-color: #222;
+  background-color: rgba(44, 62, 80);
   padding: 1rem;
 `
 const HeaderContainer = styled.div`
@@ -23,11 +23,6 @@ const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-`
-
-const H1 = styled.h1`
-  color: #fff;
-  text-align: center;
 `
 
 const Header = () => {
