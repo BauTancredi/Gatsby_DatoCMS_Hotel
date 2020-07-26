@@ -9,7 +9,7 @@ const H2 = styled.h2`
   margin-top: 4rem;
 `
 
-const TextHome = styled.div`
+const Content = styled.main`
   padding-top: 4rem;
   max-width: 1200px;
   width: 95%;
@@ -18,23 +18,24 @@ const TextHome = styled.div`
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+    column-gap: 3rem;
   }
 
   p {
     line-height: 2;
+    margin-top: 2rem;
   }
 `
 
-const ContentHome = () => {
+const ContentUs = () => {
   const info = useStaticQuery(graphql`
     query {
-      allDatoCmsPage(filter: { slug: { eq: "home" } }) {
+      allDatoCmsPage(filter: { slug: { eq: "us" } }) {
         nodes {
           title
           content
           image {
-            fluid {
+            fluid(maxWidth: 1200) {
               ...GatsbyDatoCmsFluid
             }
           }
@@ -50,12 +51,12 @@ const ContentHome = () => {
     <>
       <H2>{title}</H2>
 
-      <TextHome>
+      <Content>
         <p>{content}</p>
         <Image fluid={image.fluid} />
-      </TextHome>
+      </Content>
     </>
   )
 }
 
-export default ContentHome
+export default ContentUs
