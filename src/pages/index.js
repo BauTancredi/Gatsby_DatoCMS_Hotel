@@ -14,6 +14,18 @@ const H2 = styled.h2`
   margin-top: 5rem;
 `
 
+const ListRooms = styled.ul`
+  max-width: 1200px;
+  width: 95%;
+  margin: 4rem auto 0 auto;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+  }
+`
+
 const IndexPage = () => {
   const rooms = UseRooms()
 
@@ -23,11 +35,11 @@ const IndexPage = () => {
       <ContentHome />
 
       <H2>Our Rooms</H2>
-      <ul>
+      <ListRooms>
         {rooms.map(room => (
           <RoomPreview key={room.id} room={room} />
         ))}
-      </ul>
+      </ListRooms>
     </Layout>
   )
 }
