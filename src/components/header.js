@@ -1,7 +1,14 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { Link } from "gatsby"
 
 import Nav from "./nav"
+
+const LinkHome = styled(Link)`
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+`
 
 const Head = styled.header`
   background-color: #222;
@@ -27,7 +34,9 @@ const Header = () => {
   return (
     <Head>
       <HeaderContainer>
-        <H1>Gastby Hotel</H1>
+        <LinkHome to="/">
+          <h1>Gastby Hotel</h1>
+        </LinkHome>
 
         <Nav />
       </HeaderContainer>
