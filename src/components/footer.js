@@ -34,7 +34,7 @@ const RightsReserved = styled.p`
   padding: 1rem;
 `
 
-const Footer = () => {
+const Footer = ({ title }) => {
   const year = new Date().getFullYear()
   return (
     <>
@@ -47,7 +47,7 @@ const Footer = () => {
         </FooterContainer>
       </Foot>
       <RightsReserved>
-        Gatsby Hotel. All rights reserved {year} &copy;
+        {title}. All rights reserved {year} &copy;
       </RightsReserved>
     </>
   )
